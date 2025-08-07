@@ -1,0 +1,102 @@
+@import "../../../styles/palete.scss";
+@import "../../../styles/fonts.scss";
+
+$header-height: 100px;
+$inner-containter-miltiplicator: 0.6;
+$button-width: 40px;
+
+
+#outer-container
+{
+    display: flex;
+    justify-content: center;
+    background-color: $base-blue-color;
+    min-height: $header-height;
+    max-height: $header-height;
+    #inner-container
+    {
+        max-width: 1200px;
+        flex-grow: 1;
+        justify-content: space-between;
+        display: flex;
+        .navigation-bar 
+        {
+            min-width: 58%;
+
+            min-height: $header-height * $inner-containter-miltiplicator;
+            display: flex;
+            align-self: center;
+            gap: 10px;    
+            #logo{
+                align-self: center;
+                font-style: italic;
+            }
+            #link-buttons 
+            {
+                flex-grow: 1;
+                display: flex;
+                min-height: 10px;
+                min-height: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                justify-content: center;
+                border-radius: 56px;
+                background: $base-white-color;
+                .link-button{
+                    border: solid;
+                    border-width: 1px;
+                    min-height: $header-height * $inner-containter-miltiplicator;
+                    min-width: $button-width;
+                    color: $base-gray-color;
+                    background-color: transparent;
+                    border-color: transparent;
+                            
+                    font-family: "Inter";
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+
+                    cursor: pointer;
+                }
+                .link-button:hover
+                {
+                    color: $base-blue-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+        #medialinks-bar
+        {
+            align-self: center;
+            gap: 10px;
+            display: flex;
+            color: $base-white-color;
+        }
+    }
+}
+.logo-svg
+{
+    resize: both;
+    width: 100px;
+    height: 100px;
+
+}
+@media (max-width: 1023px)
+{
+    .navigation-bar
+    {
+        display: none;
+    }
+    
+}
+@media (min-width: 1024px)
+{
+    .navigation-bar
+    {
+        display: none;
+    }
+}

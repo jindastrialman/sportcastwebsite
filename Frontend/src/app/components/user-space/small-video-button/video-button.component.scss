@@ -1,0 +1,56 @@
+@import "../../../styles/palete.scss";
+
+.video-container
+{
+    max-width: 282px;
+    max-height: 158px;
+    min-width: 282px;
+    min-height: 158px;
+}
+
+.video-replay-container
+{
+    max-width: 282px;
+    max-height: 246px;
+    min-width: 282px;
+    min-height: 246px;
+}
+.video-image
+{
+    resize: both;
+    width: 282px;
+    height: 158px;
+    border-radius: 4px;
+}
+.label-text
+{
+    max-height: 282px;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    
+}
+.label-date
+{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color:#818C99;
+}
+.video-button
+{
+    width: 282px;
+    height: 158px;
+    border: none;
+    border-width: 0%;
+    padding: 0%;
+    background-color: $base-white-color;
+}

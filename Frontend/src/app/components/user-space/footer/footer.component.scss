@@ -1,0 +1,74 @@
+@import "../../../styles/palete.scss";
+@import "../../../styles/fonts.scss";
+
+$min-height: 200px;
+$inner-containter-miltiplicator: 0.6;
+$button-width: 40px;
+
+#outer-container
+{
+    background-color: $base-black-color;
+    height: $min-height;
+    justify-content: center;
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    #inner-container
+    {
+        max-width: 1200px;
+        flex-grow: 1;
+        display: flex;
+        justify-content: start;
+        height: 100%;
+        #contacts-bar {  
+            flex-grow: 1;
+            min-height: $min-height * $inner-containter-miltiplicator;
+            color: $base-white-color;
+            display: flex;
+            align-self: center;
+            gap: 30px;     
+            #logo{
+                align-self: center;
+                font-style: italic;
+            }
+            #text
+            {
+                align-self: center;
+                #upper-text
+                {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                    #links
+                    {
+                        gap: 10px;
+                    }
+                }
+                #lower-text
+                {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 10px;
+                }
+            }
+            
+            .underlined-white-text
+            {
+                margin-left: 10px;
+                color: $base-white-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+*
+{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -5%;
+}

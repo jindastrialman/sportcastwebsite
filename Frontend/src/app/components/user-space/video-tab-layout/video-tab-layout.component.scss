@@ -1,0 +1,56 @@
+@import "../../../styles/palete.scss";
+#video-tab-outer-container
+{
+    max-height: 548px;
+    max-width: 1200px;
+    margin-left: 40px;
+    border-bottom: 1px solid $base-lightgray-color;
+    justify-content: center;
+    margin-top: 32px;
+}
+.partition-title
+{
+    color: $base-black-color;
+    font-size: 32px;
+    padding-bottom: 32px;
+    margin-top: 12px;
+}
+.tab-content-container
+{
+    min-height: 350px;
+    max-width: 1194px;
+    min-width: 1194px;
+    display: flex;
+    justify-content: space-between;
+}
+#tabs-overlay {
+    position: relative; /* Sit on top of the page content */
+    width: 500px; /* Full width (cover the whole page) */
+    height: 80px; /* Full height (cover the whole page) */
+    top: -96px;
+    right: -400px;
+    background-color: transparent; 
+    z-index: 10; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+.right-arrow-button
+{
+    position: relative;
+    top: -47px;
+    right: -740px;
+    border-color: $base-white-color;
+    background-color: $base-white-color;
+    z-index: 11; /* Specify a stack order in case you're using a different order for other elements */
+    border: none;
+}
+.left-arrow-button
+{
+    position: relative;
+    top: -47px;
+    right: -410px;
+    border-color: $base-white-color;
+    background-color: $base-white-color;
+    z-index: 11; /* Specify a stack order in case you're using a different order for other elements */
+    border: none;
+}

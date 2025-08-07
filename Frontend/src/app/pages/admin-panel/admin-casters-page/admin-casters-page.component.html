@@ -1,0 +1,35 @@
+<app-admin-panel-sidebar></app-admin-panel-sidebar>
+
+<div class="align-center">
+    <h2>Новый комментатор</h2>
+    <form #teamCreationForm="ngForm" (ngSubmit)="onSubmit($event)">
+      <input
+        placeholder="Имя"
+        type="text"
+        name="name"
+        [(ngModel)]="newCaster.name"
+      />
+      <input
+        placeholder="Фамилия"
+        type="text"
+        name="description"
+        [(ngModel)]="newCaster.surname"
+      />
+      <div class="btn-div">
+        <button type="submit" [disabled]="!teamCreationForm.valid" class="login-btn">
+            Создать
+        </button>
+      </div>
+    </form>
+  </div>
+<div>
+  <h2>Комментаторы</h2>
+  <ul class="heroes">
+    <li *ngFor="let caster of casters">
+      <button type="button" (click)="onSelect(caster)">
+        <span class="selector-text">{{caster.name}}</span>
+        <span class="selector-text">{{caster.surname}}</span>
+      </button>
+    </li>
+  </ul>
+</div>

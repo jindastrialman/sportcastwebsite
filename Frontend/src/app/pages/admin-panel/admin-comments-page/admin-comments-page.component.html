@@ -1,0 +1,14 @@
+<app-admin-panel-sidebar></app-admin-panel-sidebar>
+
+
+<div>
+    <h2>Комментарии</h2>
+    <ul class="heroes">
+      <li *ngFor="let comment of comments">
+        <button type="button" (click)="onSelect(comment)">
+          <span class="selector-text">Текст:{{comment.text}}</span>
+          <span class="selector-text">UserId: {{comment.userId}}</span>
+        </button>
+      </li>
+    </ul>
+  </div>

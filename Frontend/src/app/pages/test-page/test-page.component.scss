@@ -1,0 +1,17 @@
+@import "../../styles/common-containers.scss";
+
+#overlay-player-container
+{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index:-1;
+}
+#player-container
+{
+    padding-top: 300px;
+    z-index: -1;
+}

@@ -1,0 +1,73 @@
+<app-admin-panel-sidebar></app-admin-panel-sidebar>
+
+<div>
+    <h2>новости</h2>
+    <ul class="news">
+      <li *ngFor="let blog of blogs">
+        <button type="button" (click)="onSelect(blog)">
+          <span class="selector-text">{{blog.id}}</span>
+          <span class="selector-text">{{blog.title}}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div>
+  <mat-form-field class="title-input-field">
+    <mat-label>Оглавление</mat-label>
+    <input matInput name="title" [(ngModel)]="this.formBlog.title">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Сео Оглавление</mat-label>
+    <input matInput name="seo-title" [(ngModel)]="this.formBlog.seoTitle">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Сео описание</mat-label>
+    <input matInput name="seo-description" [(ngModel)]="this.formBlog.seoDescription">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Ссылка (для ссылочных новостей ссылка на источник, для видео ссылка на плеер)</mat-label>
+    <input matInput name="link" [(ngModel)]="this.formBlog.link">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Тип Блога</mat-label>
+    <mat-select [(ngModel)]="this.formBlog.blogType">
+      <mat-option value="article">Статья</mat-option>
+      <mat-option value="link">Ссылка</mat-option>
+      <mat-option value="video">Видео</mat-option>
+      <mat-option value="video-replay">Повтор Матча</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Тип спорта</mat-label>
+    <mat-select [(ngModel)]="this.formBlog.sportType">
+      <mat-option value="0">Баскетбол</mat-option>
+      <mat-option value="1">Футбол</mat-option>
+      <mat-option value="2">Теннис</mat-option>
+      <mat-option value="3">Хоккей</mat-option>
+      <mat-option value="4">NFL</mat-option>
+      <mat-option value="5">F1</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Приоритет(чем новее новость, тем раньше она появится в плитках в расположении (приоритет искуственно добавляет число часов 1 к 1))</mat-label>
+    <input matInput name="priority" [(ngModel)]="this.formBlog.priority">
+
+  </mat-form-field>
+
+  <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
+  <input hidden (change)="onFileSelected($event)" #fileInput type="file" id="file">
+</div>
+  <div>
+    <mat-form-field>
+      <mat-label>Текст статьи</mat-label>
+      <textarea matInput name="article" [(ngModel)]="this.formBlog.content.textContent"></textarea>
+    </mat-form-field>
+  </div>
+  
+  <button mat-button (click)="onCreateButtonPressed()">Сохранить</button>
+  
+  <button mat-button (click)="onUpdateButtonPressed()">Обновить</button>
+  <button mat-button (click)="onDelete()">удалить</button>

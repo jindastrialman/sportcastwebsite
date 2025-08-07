@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div class="outer-container">
+    <div class="inner-container">
+        <div class="article-container" [(innerHtml)]="this.articleHtml"></div>
+        <div class="other-news-component-container">
+            <app-other-news [SportType]="this.sportType"></app-other-news>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="outer-container">
+    <div class="inner-container">
+        <div class="button-bar">
+            <button class="schedule-button" (click)="filterForAll()">Все</button>
+            <button class="schedule-button" (click)="filterForBasketball()">Баскетбол</button>
+            <button class="schedule-button" (click)="filterForFootball()">Футбол</button>
+            <button class="schedule-button" (click)="filterForTennis()">Теннис</button>
+            <button class="schedule-button" (click)="filterForHokkey()">Хоккей</button>
+            <button class="schedule-button" (click)="filterForNfl()">NFL</button>
+            <button class="schedule-button" (click)="filterForF1()">F1</button>
+        </div>
+        <app-game-schedule-container [(matchType)]="this.matchTypeId" [scheduleType]="this.MatchContainerMode.CurrentFull"></app-game-schedule-container>
+        <app-game-schedule-container [(matchType)]="this.matchTypeId" [scheduleType]="this.MatchContainerMode.FutureLight"></app-game-schedule-container>
+    </div>
+</div>
+<app-footer></app-footer>

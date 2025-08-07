@@ -1,0 +1,17 @@
+<div class="component-outer-container">
+    <div class="title">Повторы матчей</div>
+    @for (partition of newsPartitions; track partition)
+    {
+        <div class="sub-division">
+            <div class="sub-division-wrapper">
+            @for (item of partition; track item)
+            {
+                <app-small-video-button [newsModel]="item" [isReplaysPage]="true" (buttonPressed)="onVideoButtonPressed($event)"></app-small-video-button>
+            }
+            </div>
+        </div>
+    }
+    <div class="load-more-container" *ngIf="!this.ifLoadMoreDisabled">
+        <button class="load-more-button" (click)="loadMore()"><img class="show-more-svg" src="ShowMore.svg"> Показать ещё</button>
+    </div>
+</div>

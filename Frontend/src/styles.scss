@@ -1,0 +1,80 @@
+@use '@angular/material' as mat;
+body{
+    margin: 0px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@import "@danielmoncada/angular-datetime-picker/assets/style/picker.min.css";
+@import "app/styles/palete.scss";
+@import "app/styles/fonts.scss";
+
+:root {
+  @include mat.tabs-overrides((
+    active-indicator-color: $base-blue-color,
+    divider-color: $base-white-color,
+    active-hover-indicator-color: $base-blue-color,
+    inactive-ripple-color: $base-white-color,
+    active-ripple-color: $base-white-color,
+    divider-height: 30px,
+    active-indicator-shape: 40px,
+    active-indicator-height: 6px,
+    label-text-line-height: 0px 
+  ));
+}
+
+.mdc-tab-indicator .mdc-tab-indicator__content {
+  width: 48px;
+  margin-top: 8px;
+}
+
+.mat-focus-indicator::before
+{
+  border-color: $base-gray-color;
+}
+
+*
+{
+  font-family: "Inter";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.show-more-svg
+{
+  margin-right: 5px;
+}
+.load-more-button
+{
+    border: none;
+    border-top: 1px solid $base-lightgray-color;
+    border-bottom: 1px solid $base-lightgray-color;
+    background-color: $base-lightgray-color;
+    height: 36px;
+    width: 100%;
+    text-align: center;
+    
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    color: $base-blue-color;
+}
+.load-more-container
+{
+    padding-top: 20px;
+    max-width: 94%;
+    min-width: 94%;
+    display: flex;
+}
+.component-outer-container
+{
+  padding: 3.333333%;
+  min-width: 94%;
+  max-width: 94%;
+}

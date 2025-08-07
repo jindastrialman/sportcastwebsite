@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="outer-container">
+    <div class="inner-container">
+        <app-game-schedule-element [IsMatchActive]="false" [MatchInfo]="this.sanitizedMatch"></app-game-schedule-element>
+        <div class="middle-container">
+            <div class="player-comment-container">
+                <div class="player-container" [(innerHtml)]="mediaPlayerCode"></div>
+            </div>
+        </div>
+        <app-game-schedule-container [scheduleType]="MatchContainerMode.FutureDark"></app-game-schedule-container>
+    </div>
+</div>
+<app-footer></app-footer>

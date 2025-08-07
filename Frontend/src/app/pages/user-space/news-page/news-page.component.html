@@ -1,0 +1,15 @@
+
+<div [style.z-index]="this.isOverlayEnabled ? 20 : -1" id="overlay-player-container" (click)="onPlayerFadeout()">
+    <div id="player-container" [style.z-index]="this.isOverlayEnabled ? 21 : -1" [(innerHtml)]="this.currentVideoFrame"></div></div>
+
+<app-header></app-header>
+<div class="outer-container">
+    <div class="inner-container">
+        <app-game-schedule-container [matchType]="this.matchTypeId" [scheduleType]="this.MatchContainerMode.CurrentShort"></app-game-schedule-container>
+        <app-news-plates [SportType]="this.matchTypeId"></app-news-plates>
+        <app-video-tab-layout [title]='"Видеообзоры"' [newses]="this.videos" (VideoShowed)="onVideoShow($event)"></app-video-tab-layout>
+        <app-small-video-tab-layout [title]='"Повторы матчей"' [newses]="this.videoReplays" (VideoShowed)="onVideoShow($event)"></app-small-video-tab-layout>
+        <app-game-schedule-container [scheduleType]="this.MatchContainerMode.FutureDark" [matchType]="this.matchTypeId"></app-game-schedule-container>
+    </div>
+</div>
+<app-footer></app-footer>

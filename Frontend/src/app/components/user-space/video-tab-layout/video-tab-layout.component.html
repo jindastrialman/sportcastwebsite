@@ -1,0 +1,36 @@
+<div id="video-tab-outer-container" *ngIf="this.newses">
+<div class="partition-title">{{this.title}}</div>
+<mat-tab-group mat-stretch-tabs="false" disableRipple="true" headerPosition="below" mat-align-tabs="center" [(selectedIndex)]="this.selectedIndex">
+    <mat-tab>
+      <div class="tab-content-container">
+        <app-video-button [(newsModel)]="newses[0]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+        <app-video-button [(newsModel)]="newses[1]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+        <app-video-button [(newsModel)]="newses[2]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+      </div>
+    </mat-tab>
+    <mat-tab>
+      <div class="tab-content-container">
+      <app-video-button [(newsModel)]="newses[3]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+      <app-video-button [(newsModel)]="newses[4]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+      <app-video-button [(newsModel)]="newses[5]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+    </div>
+    </mat-tab>
+    <mat-tab>
+      <div class="tab-content-container">
+      <app-video-button [(newsModel)]="newses[6]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+      <app-video-button [(newsModel)]="newses[7]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+      <app-video-button [(newsModel)]="newses[8]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+    </div>
+    </mat-tab>
+    <mat-tab>
+      <div class="tab-content-container">
+      <app-video-button [(newsModel)]="newses[9]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+      <app-video-button [(newsModel)]="newses[10]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+      <app-video-button [(newsModel)]="newses[11]" (buttonPressed)="onVideoButtonPressed($event)"></app-video-button>
+    </div>
+    </mat-tab>
+</mat-tab-group>
+<button class="left-arrow-button" (click)="onLeftClick()" [disabled]="this.selectedIndex <= 0"><img src="arrowToLeft.svg"></button>
+<button class="right-arrow-button" (click)="onRightClick()"[disabled]="this.selectedIndex >= 3"><img src="arrowToRight.svg"></button>
+<div id="tabs-overlay"></div>
+</div>

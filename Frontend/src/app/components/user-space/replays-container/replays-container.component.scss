@@ -1,0 +1,47 @@
+@import "../../../styles/palete.scss";
+.title
+{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -2%;
+    margin-bottom: 32px;
+}
+.sub-division-wrapper
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.sub-division
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-bottom: 1px solid #D9DDE1;
+    min-height: 516px;
+    margin-top: 32px;
+}
+
+.load-more-container
+{
+    max-width: 100%;
+    min-width: 100%;
+    display: flex;
+}
+.load-more-button
+{
+    border: none;
+    border-top: 1px solid $base-lightgray-color;
+    border-bottom: 1px solid $base-lightgray-color;
+    background-color: $base-lightgray-color;
+    height: 36px;
+    width: 100%;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    
+}

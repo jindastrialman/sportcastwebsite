@@ -1,0 +1,31 @@
+
+<div class="news-panel-outer-container">
+    <div class="news-list-component">
+        <div class="title" *ngIf="!this.TitleDisabled">Новости</div>
+        @for (item of news; track item) {
+            <button class="article-redirect-button" (click)="redirectToArticle(item)">
+                <div *ngIf="this.SportType == -1" class="news-line">
+
+                    <div *ngIf="item.sportType == MatchType.football" class="football-name-text">{{ this.sportTypeConverter.translateSportType(item.sportType)}} </div>
+                    <div *ngIf="item.sportType == MatchType.basketball" class="basketball-name-text">{{ this.sportTypeConverter.translateSportType(item.sportType)}} </div>
+                    <div *ngIf="item.sportType == MatchType.hokkey" class="hokkey-name-text">{{ this.sportTypeConverter.translateSportType(item.sportType)}} </div>
+                    <div *ngIf="item.sportType == MatchType.F1" class="f1-name-text">{{ this.sportTypeConverter.translateSportType(item.sportType)}} </div>
+                    <div *ngIf="item.sportType == MatchType.NFL" class="nfl-name-text">{{ this.sportTypeConverter.translateSportType(item.sportType)}} </div>
+                    <div *ngIf="item.sportType == MatchType.tennis" class="tennis-name-text">{{ this.sportTypeConverter.translateSportType(item.sportType)}} </div>
+                    
+                    <div class="dot-text"> · </div>
+                    <div class="timestamp-text"> {{this.dateFormatter.formatDateForSchedule(item.createdAt)}}</div>
+                </div>
+                <div class="news-line">
+                    <div class="title-text">{{ item.title }}</div>
+                </div>
+                <div *ngIf="this.SportType != -1" class="news-line">
+                    <div class="timestamp-text">{{this.dateFormatter.formatDate(item.createdAt)}}</div>
+                </div>
+            </button>
+            }
+        <div class="load-more-container" *ngIf="!this.ifLoadMoreDisabled">
+            <button class="load-more-button" (click)="loadMoreNews()"><img class="show-more-svg" src="ShowMore.svg"> Показать ещё</button>
+        </div>
+    </div>
+</div>

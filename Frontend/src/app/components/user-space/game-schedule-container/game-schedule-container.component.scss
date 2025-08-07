@@ -1,0 +1,84 @@
+@import "../../../styles/palete.scss";
+.text-div
+{
+    padding-top: 30px;
+    min-width: 1200px;
+    justify-content: start;
+    display: flex;
+    color: $base-red-color;
+
+    padding-bottom: 20px;
+
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -2%;
+}
+.matches-list-div
+{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    min-width: 1200px;
+    min-height: 40px;
+}
+.dark-header-div
+{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    min-width: 1200px;
+    justify-content: space-between;
+    display: flex;
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -2%;
+}
+.dark-header-button
+{
+    width: 147px;
+    height: 36px;
+    background-color: $base-white-color;
+    border: solid 1px;
+    color: $base-blue-color;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    border-color: $base-blue-color;
+    border-radius: 4px;
+    border-width: 1px;    
+
+}
+.icon
+{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top:6px;
+    left:14px;
+}
+.dark-header-button-text
+{
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    position: relative;
+    top:6px;
+    left:14px;
+}
+.small-match-wrapper
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.small-matches-list-div
+{
+    @extend .matches-list-div;
+    display: flex;
+    flex-direction: column;
+}

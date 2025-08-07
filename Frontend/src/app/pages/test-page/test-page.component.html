@@ -1,0 +1,12 @@
+
+<app-header></app-header>
+<div class="outer-container">
+    <div [style.z-index]="this.isOverlayEnabled ? 20 : -1" id="overlay-player-container" (click)="onPlayerFadeout()">
+        <div id="player-container" [style.z-index]="this.isOverlayEnabled ? 21 : -1" [(innerHtml)]="this.currentVideoFrame"></div>
+    </div>
+    <div class="inner-container">
+        <app-game-schedule-container [scheduleType]="this.MatchContainerMode.CurrentShort"></app-game-schedule-container>
+        <app-commentary-section></app-commentary-section>
+        <app-video-tab-layout [newses]="this.newses" (VideoShowed)="onVideoShow($event)"></app-video-tab-layout>
+    </div>
+</div>

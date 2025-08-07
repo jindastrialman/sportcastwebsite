@@ -1,0 +1,36 @@
+<app-admin-panel-sidebar></app-admin-panel-sidebar>
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="align-center">
+    <h2>Новая команда</h2>
+    <form #teamCreationForm="ngForm" (ngSubmit)="onSubmit($event)">
+      <input
+        placeholder="Полное название команды"
+        type="text"
+        name="name"
+        [(ngModel)]="newTeam.name"
+      />
+      <!--<input
+        placeholder="Описание"
+        type="text"
+        name="description"
+        [(ngModel)]="newTeam.description"
+      />-->
+      <input type="file" class="file-upload" [(ngModel)]="newTeam.teamLogoUrl" onchange="console.log(event.target.files)">
+      <div class="btn-div">
+        <button type="submit" [disabled]="!teamCreationForm.valid" class="login-btn">
+            Создать
+        </button>
+      </div>
+    </form>
+  </div>
+<div>
+  <h2>команды</h2>
+  <ul class="heroes">
+    <li *ngFor="let team of teams">
+      <button type="button" (click)="onSelect(team)">
+        <span class="badge">{{team.name}}</span>
+        <img class="team-logo-image" [src]="team.teamLogoUrl">
+      </button>
+    </li>
+  </ul>
+</div>

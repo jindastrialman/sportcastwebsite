@@ -1,0 +1,87 @@
+<app-admin-panel-sidebar></app-admin-panel-sidebar>
+<div class="outer-container">
+  <div class="inner-container">
+<h2>Matches</h2>
+
+<div>
+    <h2>матчи</h2>
+    <ul class="heroes">
+      <li *ngFor="let match of matches">
+        <button type="button" (click)="onSelect($event, match)">
+          <span class="selector-text">{{this.getButtonFormattedString(match)}}</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div>
+  <h2>панель создания/изменения</h2>
+  
+  <h3>Время начала матча</h3>
+  <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date Time" [(ngModel)]="this.formMatch.matchStartTime">
+  <owl-date-time #dt1></owl-date-time>
+
+  <h3>Время появления матча на странице</h3>
+  <input [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="Date Time" [(ngModel)]="this.formMatch.startShowTime">
+  <owl-date-time #dt2></owl-date-time>
+
+  <h3>Время удаления матча со страницы</h3>
+  <input [owlDateTime]="dt3" [owlDateTimeTrigger]="dt3" placeholder="Date Time" [(ngModel)]="this.formMatch.endShowTime">
+  <owl-date-time #dt3></owl-date-time>
+
+  <h3>медиаплеер</h3>
+    <mat-form-field>
+      <mat-label>медиаплеер</mat-label>
+      <textarea matInput name="article" [(ngModel)]="this.formMatch.mediaPlayerUrl"></textarea>
+    </mat-form-field>
+
+    <h3>сео теги</h3>
+    <input type="text" [(ngModel)]="this.formMatch.seoTags">
+
+    <h3>сео заголовок</h3>
+    <input type="text" [(ngModel)]="this.formMatch.seoTitle">
+
+    <h3>сео описание</h3>
+    <input type="text" [(ngModel)]="this.formMatch.seoDescription">
+
+    
+    
+  <h3>Тип спорта</h3>
+  <mat-form-field>
+    <mat-select [(ngModel)]="this.formMatch.matchType">
+      <mat-option value=0>Баскетбол</mat-option>
+      <mat-option value=1>Футбол</mat-option>
+      <mat-option value=2>Теннис</mat-option>
+      <mat-option value=3>Хоккей</mat-option>
+      <mat-option value=4>NFL</mat-option>
+      <mat-option value=5>F1</mat-option>
+    </mat-select>
+  </mat-form-field>
+      
+    <h3>команда 1</h3>
+    <input list="browsers" name="browser" [(ngModel)]="this.formMatch.matchTeams[0]">
+    <datalist id="browsers">
+    <option *ngFor="let opt of teams" [value]="opt.id+' '+opt.name"></datalist>
+
+    <h3>команда 2</h3>
+    <input list="browsers" name="browser" [(ngModel)]="this.formMatch.matchTeams[1]">
+    <datalist id="browsers">
+    <option *ngFor="let opt of teams" [value]="opt.id+' '+opt.name"></datalist>
+
+    <h3>комментатор</h3>
+    <input list="commentator" name="commentator" [(ngModel)]="this.formMatch.matchCasters[0]">
+    <datalist id="commentator">
+    <option *ngFor="let opt of casters" [value]="opt.id+' '+opt.name+' '+ opt.surname"></datalist>
+    
+    <div>
+    <button (click)="createNewMatch()">
+      Создать
+    </button>
+    <button (click)="updateMatch()">
+      изменить
+    </button>
+    <button (click)="deleteMatch()">
+      Удалить
+    </button>
+  </div>
+  </div>
+</div></div>

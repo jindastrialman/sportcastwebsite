@@ -1,0 +1,101 @@
+@import "../../../styles/palete.scss";
+@import "../../../styles/fonts.scss";
+
+$header-height: 100px;
+$inner-containter-miltiplicator: 0.6;
+$button-width: 40px;
+
+#outer-container
+{
+    display: flex;
+    background-color: $base-blue-color;
+    min-height: $header-height;
+    #inner-container
+    {
+        flex-grow: 1;
+        display: flex;
+        gap: 30%;
+        #navigation-bar 
+        {
+            font-family: "Inter";
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 20px;
+            letter-spacing: -0.02em;
+            text-align: left;
+            text-underline-position: from-font;
+            text-decoration-skip-ink: none;
+
+            margin-left: 10%;
+            min-height: $header-height * $inner-containter-miltiplicator;
+            display: flex;
+            align-self: center;
+            gap: 10px;    
+            #logo{
+                align-self: center;
+                font-style: italic;
+            }
+            #link-buttons 
+            {
+                flex-grow: 1;
+                display: flex;
+                min-height: 10px;
+                justify-content: center;
+                .link-button{
+                    border: solid;
+                    border-width: 1px;
+                    min-height: $header-height * $inner-containter-miltiplicator;
+                    min-width: $button-width;
+                    color: $base-white-color;
+                    background-color: $base-blue-color;
+                    border-color: $base-blue-color;
+                            
+                    font-family: "Inter";
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 20px;
+                    letter-spacing: -0.02em;
+                    text-align: left;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+
+                    cursor: pointer;
+                }
+                .link-button:hover
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
+        #medialinks-bar
+        {
+            align-self: center;
+            gap: 10px;
+            display: flex;
+            color: $base-white-color;
+            #email-info
+            {
+                flex: 0, 0, 120px;
+                align-items: end;
+                #email-text
+                {
+                    font-family: "Inter";
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    letter-spacing: -0.02em;
+                    text-align: right;
+                    text-underline-position: from-font;
+                    text-decoration-skip-ink: none;
+                    
+
+                    text-align: end;
+                    #email
+                    {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@import "../../../styles/palete.scss";
+
+.first-line-image
+{
+    width: 588px;
+    height: 330px;
+    border-radius: 4px;
+    resize: both;
+}
+.first-line-news, .second-line-news
+{
+    width: 1200px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+.first-line-news
+{
+    border-bottom: 1px solid #D9DDE1;
+}
+.first-line-div
+{
+    margin-bottom: 24px;
+}
+.second-line-div
+{
+    margin-top: 24px
+}
+.first-line-button, .second-line-button
+{
+    background-color: $base-white-color;
+    border: none;
+    border-width: 0%;
+    padding: 0%;
+}
+.second-line-image
+{
+    width: 282px;
+    height: 160px;
+    
+    border-radius: 4px;
+    resize: both;
+}
+.header
+{
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -2%;
+}
+.component-outer-container
+{
+    margin-top: 0%;
+}
+
+.first-line-div-title
+{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0%;
+}
+
+.second-line-div-title
+{
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0%;
+}
+.second-line-div-date, 
+.first-line-div-date
+{
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    color: #818C99;
+}

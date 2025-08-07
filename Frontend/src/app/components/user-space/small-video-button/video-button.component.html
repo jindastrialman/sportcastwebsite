@@ -1,0 +1,14 @@
+<div class="video-container" *ngIf="!this.isReplaysPage">
+    <button class="video-button" (click)="onButtonClick();">
+        <img [src]="this.newsModel?.pictureUrl" class="video-image">
+    </button>
+    <div class="label-text">{{this.newsModel?.title}}</div>
+</div>
+
+<div class="video-replay-container" *ngIf="this.isReplaysPage">
+    <button class="video-button" (click)="onButtonClick();">
+        <img [src]="this.newsModel?.pictureUrl" class="video-image">
+    </button>
+    <div class="label-text">{{this.newsModel?.title}}</div>
+    <div class="label-date">{{this.dateFormatter.formatDateForReplays(this.newsModel?.createdAt)}}</div>
+</div>

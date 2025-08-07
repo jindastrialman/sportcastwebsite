@@ -1,0 +1,39 @@
+
+<div class="matches-list-div" *ngIf="(this.scheduleType == MatchContainerMode.Current || this.scheduleType == MatchContainerMode.CurrentFull) && showedMatches.length> 0">
+    <div class="text-div">Сейчас в эфире</div>
+    @for (item of showedMatches; track item)
+    {
+        <div><app-game-schedule-element [MatchInfo]="item" [IsDarkTheme]="false"></app-game-schedule-element></div>
+    }
+    
+    <div *ngIf="this.scheduleType == MatchContainerMode.Current" class="load-more-container">
+        <button class="load-more-button" (click)="redirectToSchedule()"><img class="show-more-svg" src="ShowMore.svg">Показать ещё</button>
+    </div>
+</div>
+
+<div class="matches-list-div" *ngIf="this.scheduleType == MatchContainerMode.CurrentShort  && showedMatches.length > 0">
+    <div class="text-div">Сейчас в эфире</div>
+    <div class ="sub-division">
+    <div class="small-match-wrapper">
+            @for (item of showedMatches; track item)
+            {
+                <div><app-game-schedule-element [MatchInfo]="item" [IsButtonShowed]="false" [IsDarkTheme]="false" [IsShort]="true"></app-game-schedule-element></div>
+            }
+    </div>
+    </div>
+</div>
+
+<div class="matches-list-div" *ngIf="this.scheduleType == MatchContainerMode.FutureDark">
+    <div class="dark-header-div">Ближайшие трансляции<button (click)="redirectToSchedule()" class="dark-header-button"><img class="icon" src="schedule.svg"><div class="dark-header-button-text">Расписание</div></button></div>
+    @for (item of showedMatches; track item)
+    {
+        <div><app-game-schedule-element [MatchInfo]="item" [IsDarkTheme]="true"></app-game-schedule-element></div>
+    }
+</div>
+
+<div class="matches-list-div" *ngIf="this.scheduleType == MatchContainerMode.FutureLight">
+    @for (item of matchesGroupedByDay; track item)
+    {
+        <app-game-schedule-division [matches]="item"></app-game-schedule-division>
+    }
+</div>

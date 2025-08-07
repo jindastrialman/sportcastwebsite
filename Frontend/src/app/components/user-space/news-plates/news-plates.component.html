@@ -1,0 +1,50 @@
+<div class="component-outer-container" *ngIf="this.newses.length>0">
+<div class="header">Новости</div>
+<div class="first-line-news">
+    <div class="first-line-div">
+        <button class="first-line-button" (click)="redirectToArticle(this.newses[0])">
+            <img class="first-line-image" [src]="this.newses[0]?.pictureUrl">
+        </button>
+        <div class="first-line-div-title">{{this.newses[0]?.title}}</div>
+        <div class="first-line-div-date">{{this.dateFormatter.formatDateForSchedule(this.newses[0]?.createdAt)}}</div>
+    </div>
+    <div class="first-line-div">
+        <button class="first-line-button" (click)="redirectToArticle(this.newses[1])">
+            <img class="first-line-image" [src]="this.newses[1]?.pictureUrl">
+        </button>
+        <div class="first-line-div-title">{{this.newses[1]?.title}}</div>
+        <div class="first-line-div-date">{{this.dateFormatter.formatDateForSchedule(this.newses[1]?.createdAt)}}</div>
+    </div>
+    </div>
+<div class="second-line-news">
+    <div class="second-line-div">
+        <button class="second-line-button" (click)="redirectToArticle(this.newses[2])">
+            <img class="second-line-image" [src]="this.newses[2]?.pictureUrl">
+        </button>
+        <div class="second-line-div-title">{{this.newses[2]?.title}}</div>
+        <div class="second-line-div-date">{{this.dateFormatter.formatDateForSchedule(this.newses[2]?.createdAt)}}</div>
+    </div>
+    <div class="second-line-div">
+        <button class="second-line-button" (click)="redirectToArticle(this.newses[3])">
+            <img class="second-line-image" [src]="this.newses[3]?.pictureUrl">
+        </button>
+        <div class="second-line-div-title">{{this.newses[3]?.title}}</div>
+        <div class="second-line-div-date">{{this.dateFormatter.formatDateForSchedule(this.newses[3]?.createdAt)}}</div>
+    </div>
+    <div class="second-line-div">
+        <button class="second-line-button" (click)="redirectToArticle(this.newses[4])">
+            <img class="second-line-image" [src]="this.newses[4]?.pictureUrl">
+        </button>
+        <div class="second-line-div-title">{{this.newses[4]?.title}}</div>
+        <div class="second-line-div-date">{{this.dateFormatter.formatDateForSchedule(this.newses[4]?.createdAt)}}</div>
+    </div>
+    <div class="second-line-div">
+        <button class="second-line-button" (click)="redirectToArticle(this.newses[5])">
+            <img class="second-line-image" [src]="this.newses[5]?.pictureUrl">
+        </button>
+        <div class="second-line-div-title">{{this.newses[5]?.title}}</div>
+        <div class="second-line-div-date">{{this.dateFormatter.formatDateForSchedule(this.newses[5]?.createdAt)}}</div>
+    </div>
+</div>
+</div>
+<app-other-news *ngIf="this.newses.length>0" [InitialSkip]="6" [InitialCount]="0" [TitleDisabled]="true" [SportType]="this.SportType"></app-other-news>

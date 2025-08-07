@@ -1,0 +1,13 @@
+@import "../../../styles/common-containers.scss";
+
+.player-container
+{
+    width: 40%;
+    aspect-ratio: 16 / 9;
+    background-color: gray;
+}
+.middle-container
+{
+    margin-left:40px;
+    margin-top: 32px;
+}

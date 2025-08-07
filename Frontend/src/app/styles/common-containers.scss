@@ -1,0 +1,21 @@
+@import "palete.scss";
+
+.outer-container
+{
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    background-color: $base-lightgray-color;
+    
+    .inner-container
+    {
+        padding-top: 20px;
+        min-height: 1080px;
+        background-color: $base-white-color;
+        width: 1280px;
+        max-width: 1280px;
+    }
+}

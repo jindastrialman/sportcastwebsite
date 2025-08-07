@@ -1,0 +1,26 @@
+.video-container
+{
+    max-width: 384;
+    max-height: 328;
+    min-width: 384;
+    min-height: 328;
+}
+.video-image
+{
+    resize: both;
+    width: 384px;
+    height: 216px;
+}
+.label-text
+{
+    width: 384px;
+    word-wrap: break-word;
+}
+.video-button
+{
+    border-width: 0%;
+    padding: 0%;
+    width: 384px;
+    height: 216px;
+    border: none;
+}

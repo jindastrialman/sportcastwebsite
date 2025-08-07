@@ -1,0 +1,7 @@
+<div class="part-container">
+<div class="match-date">{{this.date}}</div>
+@for (item of matches; track item)
+{
+    <div><app-game-schedule-element [MatchInfo]="item" [IsDarkTheme]="false" [IsButtonShowed]="false"></app-game-schedule-element></div>
+}
+</div>

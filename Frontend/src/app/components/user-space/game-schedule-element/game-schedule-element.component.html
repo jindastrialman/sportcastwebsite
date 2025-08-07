@@ -1,0 +1,84 @@
+<div *ngIf="!this.IsDarkTheme && this.IsButtonShowed && !this.IsShort">
+<div id="outer-container">
+    <div id="oponents-bar" (click)="ButtonClicked()">
+        <div id="left-opponent-bar">
+            <div class="team-name-string-left">{{MatchInfo.teams[0].teamName}}</div>
+            <img class="team-logo-image" [src]="MatchInfo.teams[0].imageUrl">
+        </div>
+        <div id="time-div">
+            <div id="date-bar">{{MatchInfo.startTime.getDate().toString().padStart(2, '0')}}/{{MatchInfo.startTime.getMonth().toString().padStart(2, '0')}}/{{MatchInfo.startTime.getFullYear().toString().padStart(4, '0')}}</div>
+            <div id="time-bar">{{MatchInfo.startTime.getHours().toString().padStart(2, '0')}}:{{MatchInfo.startTime.getMinutes().toString().padStart(2, '0')}}</div>
+            <div id="commentator-bar"><img src="mic.svg">{{MatchInfo.commetator.name}}</div>
+        </div>
+        <div id="right-opponent-bar">
+            <img class="team-logo-image" [src]="MatchInfo.teams[1].imageUrl">
+            <div class="team-name-string-right">{{MatchInfo.teams[1].teamName}}</div>
+        </div>
+    </div>
+    <div id="watch-match-button-placeholder">
+        <button class="watch-button" (click)="ButtonClicked()">
+            <div class="watch-text-wrapper">
+                <div class="old">▷</div>
+                <div class="new">▶</div> 
+            </div>
+        </button>
+    </div>
+</div>
+</div>
+
+<div *ngIf="!this.IsDarkTheme && !this.IsButtonShowed && !this.IsShort">
+    <div id="outer-container">
+        <div id="oponents-bar-without-button" (click)="ButtonClicked()">
+            <div id="left-opponent-bar">
+                <div class="team-name-string-left">{{MatchInfo.teams[0].teamName}}</div>
+                <img class="team-logo-image" [src]="MatchInfo.teams[0].imageUrl">
+            </div>
+            <div id="time-div">
+                <div id="date-bar">{{MatchInfo.startTime.getDate().toString().padStart(2, '0')}}/{{MatchInfo.startTime.getMonth().toString().padStart(2, '0')}}/{{MatchInfo.startTime.getFullYear().toString().padStart(4, '0')}}</div>
+                <div id="time-bar">{{MatchInfo.startTime.getHours().toString().padStart(2, '0')}}:{{MatchInfo.startTime.getMinutes().toString().padStart(2, '0')}}</div>
+                <div id="commentator-bar"><img src="mic.svg">{{MatchInfo.commetator.name}}</div>
+            </div>
+            <div id="right-opponent-bar">
+                <img class="team-logo-image" [src]="MatchInfo.teams[1].imageUrl">
+                <div class="team-name-string-right">{{MatchInfo.teams[1].teamName}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="!this.IsDarkTheme && !this.IsButtonShowed && this.IsShort">
+    <div id="small-outer-container">
+        <div id="oponents-bar-without-button" (click)="ButtonClicked()">
+            <div id="left-opponent-bar">
+                <div class="team-name-string-left">{{MatchInfo.teams[0].teamName}}</div>
+                <img class="team-logo-image" [src]="MatchInfo.teams[0].imageUrl">
+            </div>
+            <div class="small-bar-arrow">▶</div> 
+            <div id="right-opponent-bar">
+                <img class="team-logo-image" [src]="MatchInfo.teams[1].imageUrl">
+                <div class="team-name-string-right">{{MatchInfo.teams[1].teamName}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="this.IsDarkTheme">
+    <div id="dark-outer-container">
+        <div id="dark-oponents-bar" (click)="ButtonClicked()">
+            <div id="left-opponent-bar">
+                <div class="dark-team-name-string-left">{{MatchInfo.teams[0].teamName}}</div>
+                <img class="team-logo-image" [src]="MatchInfo.teams[0].imageUrl">
+            </div>
+            <div id="time-div">
+                <div id="dark-date-bar">{{MatchInfo.startTime.getDate().toString().padStart(2, '0')}}/{{MatchInfo.startTime.getMonth().toString().padStart(2, '0')}}/{{MatchInfo.startTime.getFullYear().toString().padStart(4, '0')}}</div>
+                <div id="dark-time-bar">{{MatchInfo.startTime.getHours().toString().padStart(2, '0')}}:{{MatchInfo.startTime.getMinutes().toString().padStart(2, '0')}}</div>
+                <div id="dark-commentator-bar"><img src="darkmicrophone.svg">{{MatchInfo.commetator.name}}</div>
+            </div>
+            <div id="right-opponent-bar">
+                <img class="team-logo-image" [src]="MatchInfo.teams[1].imageUrl">
+                <div class="dark-team-name-string-right">{{MatchInfo.teams[1].teamName}}</div>
+            </div>
+        </div>
+    </div>
+</div>

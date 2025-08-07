@@ -1,0 +1,31 @@
+@import "../../../styles/common-containers.scss";
+@import "../../../styles/palete.scss";
+
+.button-bar
+{
+    padding: 32px;
+    gap: 8px;
+}
+.schedule-button
+{
+    height: 44;
+    margin-right: 8px;
+    padding-top: 12px;
+    padding-right: 20px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    border-radius: 100px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -1%;
+    background-color: $base-lightgray-color;
+    border: none;
+    color: $base-gray-color;
+}
+.schedule-button:focus
+{
+    background-color: $base-blue-color;
+    color: $base-white-color;
+}
