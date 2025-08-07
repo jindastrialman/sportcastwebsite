@@ -1,0 +1,4 @@
+1. перейти в папку /etc/postgresql/14/main
+2. в postgresql.conf надо поменять listen_addresses на "*" чтобы можно было подключиться 
+3. в pg_hba.conf надо заменить "host    all        all         192.168.0.1/32"
+		            на "host    all        all         all           "
