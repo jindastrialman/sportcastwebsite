@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\CKORD\source\repos\angular site\Backend\DataService\DataService\bin\Release\net8.0\publish\</_PublishTargetUrl>
+    <History>True|2025-03-03T14:36:53.1873437Z;True|2025-03-03T17:35:23.2462340+03:00;True|2025-03-03T17:29:39.1555410+03:00;True|2025-03-03T15:50:45.9556308+03:00;True|2025-03-03T15:50:40.9489263+03:00;True|2025-03-03T15:49:34.5362250+03:00;True|2025-03-03T09:57:46.9945896+03:00;True|2025-01-12T17:15:46.4680992+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>
